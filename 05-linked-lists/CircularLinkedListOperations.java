@@ -76,4 +76,27 @@ public class CircularLinkedListOperations {
     }
 
     
+    public void display(){
+        if(head == null){
+            System.out.println("Empty list");
+            return;
+        }
+        Node temp = head;
+        do{
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        } while(temp != head);
+        System.out.println("(back to " + head.data + ")");
+    }
+
+    public static void main(String[] args) {
+        CircularLinkedListOperations list = new CircularLinkedListOperations();
+        list.addAtEnd(20);
+        list.addAtEnd(40);
+        list.addAtBeginning(10);
+        list.addAtIndex(30, 2);
+        list.addAtIndex(50, 4);
+        list.display();
+    }
+
 }

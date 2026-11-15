@@ -73,11 +73,17 @@ public class BinaryTreeTraversals {
         tree.root.right.left = new Node(23);
         tree.root.right.right = new Node(52);
 
+        System.out.print("Inorder: ");
         tree.inorder(tree.root);
+        System.out.println();
 
+        System.out.print("Preorder: ");
         tree.preorder(tree.root);
+        System.out.println();
 
+        System.out.print("Postorder: ");
         tree.postorder(tree.root);
+        System.out.println();
 
     }
 }

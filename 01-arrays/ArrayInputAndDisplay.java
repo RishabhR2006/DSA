@@ -15,7 +15,7 @@ public class ArrayInputAndDisplay{
             Arr[i] = sc.nextInt();
         }
 
-        for(int num=0; num<=arraySize;num++){
+        for(int num=0; num<arraySize;num++){
             System.out.println("The number at index '"+num+"' is "+Arr[num]);
         }
         sc.close();

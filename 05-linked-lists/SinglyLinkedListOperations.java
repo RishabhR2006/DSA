@@ -40,7 +40,7 @@ public class SinglyLinkedListOperations{
         Node temp = head;
 
         while(temp!=null){
-            System.out.println(temp.data+" --> ");
+            System.out.print(temp.data+" --> ");
             temp = temp.next;
         }
         System.out.println("null");
@@ -77,8 +77,21 @@ public class SinglyLinkedListOperations{
         return false;
     }
 
-    public void insertAtIndex(int data, int key){
-        
+    public void insertAtIndex(int data, int index){
+        if(index <= 0 || head == null){
+            insertAtBeginning(data);
+            return;
+        }
+        Node temp = head;
+        for(int i = 0; i < index - 1 && temp.next != null; i++){
+            temp = temp.next;
+        }
+        Node newNode = new Node(data);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        if(temp == tail){
+            tail = newNode;
+        }
     }
 
     public Node deleteAtBeginning(){
@@ -95,15 +108,22 @@ public class SinglyLinkedListOperations{
     }
 
     public Node deleteAtEnd(){
-        Node temp;
         if(head==null){
-            return head;
+            return null;
         }
-        else{
-            temp = tail;
+        Node removed = tail;
+        if(head == tail){
+            head = null;
             tail = null;
+            return removed;
         }
-        return tail;
+        Node temp = head;
+        while(temp.next != tail){
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+        return removed;
     }
 
     public void sortLL(){
@@ -136,4 +156,27 @@ public class SinglyLinkedListOperations{
     
 
 
+    public static void main(String[] args) {
+        SinglyLinkedListOperations list = new SinglyLinkedListOperations();
+        list.insertAtEnd(30);
+        list.insertAtEnd(10);
+        list.insertAtBeginning(50);
+        list.insertAtIndex(20, 2);
+        System.out.print("List: ");
+        list.displayLL();
+
+        System.out.println("Number of nodes: " + list.countNodes());
+        System.out.println("Is 10 present? " + list.searchNode(10));
+        System.out.print("Middle element: ");
+        list.middleElement();
+
+        list.sortLL();
+        System.out.print("Sorted: ");
+        list.displayLL();
+
+        System.out.println("Deleted from beginning: " + list.deleteAtBeginning().data);
+        System.out.println("Deleted from end: " + list.deleteAtEnd().data);
+        System.out.print("List now: ");
+        list.displayLL();
+    }
 }

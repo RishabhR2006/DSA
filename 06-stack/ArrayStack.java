@@ -70,5 +70,19 @@ public class ArrayStack{
 
    
 
+    public static void main(String[] args) {
+        ArrayStack stack = new ArrayStack(3);
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);   // stack is full -> overflow message
+
+        System.out.println("Is 20 in the stack? " + stack.searchRecursive(20));
+        System.out.println("Popped: " + stack.pop());
+        System.out.println("Popped: " + stack.pop());
+        System.out.println("Popped: " + stack.pop());
+        stack.pop();      // stack is empty -> underflow message
+    }
+
 }
 

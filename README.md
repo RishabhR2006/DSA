@@ -14,7 +14,7 @@ java LinkedListReverse
 | `01-arrays` | read and print an array, insert at an index (user input and predefined array), delete every occurrence of a value, reverse a string |
 | `02-searching` | linear search, binary search |
 | `03-sorting` | bubble sort |
-| `04-recursion` | print 1..N, sum of natural numbers, factorial, Fibonacci (Nth term and series) |
+| `04-recursion` | print 1..N, sum of natural numbers, factorial, Fibonacci series, Nth Fibonacci term |
 | `05-linked-lists` | basics, search, insert before a node, delete at a position, reverse, full singly linked list operations, circular linked list operations |
 | `06-stack` | array-based stack: push, pop, overflow/underflow checks, recursive display and search |
 | `07-trees` | binary tree with inorder, preorder and postorder traversal |

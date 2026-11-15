@@ -6,7 +6,7 @@ public class ArrayDeleteAllOccurrences{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.err.println("Enter the size of the array:");
+        System.out.println("Enter the size of the array:");
         int arraySize = sc.nextInt();
         int[] Arr = new int[arraySize];
 
