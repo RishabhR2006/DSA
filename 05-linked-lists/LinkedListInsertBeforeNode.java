@@ -1,4 +1,4 @@
-public class DeleteAtPosition {
+public class LinkedListInsertBeforeNode {
     static class Node {
         int data;
         Node next;
@@ -9,18 +9,22 @@ public class DeleteAtPosition {
     }
     Node head=null;
 
-    void deleteAtPos(int pos) {
+    void addBefore(int target,int data) {
+        Node newNode=new Node(data);
         if(head==null) return;
-        if(pos==0) {
-            head=head.next;
+        if(head.data==target) {
+            newNode.next=head;
+            head=newNode;
             return;
         }
         Node temp=head;
-        for(int i=0;temp!=null && i<pos-1;i++) {
+        while(temp.next!=null && temp.next.data!=target) {
             temp=temp.next;
         }
-        if(temp==null || temp.next==null) return;
-        temp.next=temp.next.next;
+        if(temp.next!=null) {
+            newNode.next=temp.next;
+            temp.next=newNode;
+        }
     }
 
     void add(int data) {
@@ -44,13 +48,12 @@ public class DeleteAtPosition {
     }
 
     public static void main(String[] args) {
-        DeleteAtPosition list=new DeleteAtPosition();
+        LinkedListInsertBeforeNode list=new LinkedListInsertBeforeNode();
         list.add(1);
         list.add(2);
-        list.add(3);
         list.add(4);
         list.printList();
-        list.deleteAtPos(2);
+        list.addBefore(4,3);
         list.printList();
     }
 }

@@ -1,9 +1,9 @@
-public class Stack{
+public class ArrayStack{
     int maxSize;
     int[] stackArr;
     int top;
 
-    public Stack(int size){
+    public ArrayStack(int size){
         maxSize = size;
         stackArr = new int[maxSize];
         top = -1;

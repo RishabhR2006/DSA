@@ -1,4 +1,4 @@
-public class Tree {
+public class BinaryTreeTraversals {
     static class Node{
         int data;
         Node left, right;
@@ -63,7 +63,7 @@ public class Tree {
     }
 
     public static void main(String[] args) {
-        Tree tree = new Tree();
+        BinaryTreeTraversals tree = new BinaryTreeTraversals();
 
         tree.root = new Node(10);
         tree.root.left = new Node(20);

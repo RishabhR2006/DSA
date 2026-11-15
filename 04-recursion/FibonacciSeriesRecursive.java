@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class FibRecurrPrintN{
+public class FibonacciSeriesRecursive{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the index of the term you want from the Fibonacci Series: ");

@@ -1,5 +1,5 @@
 import java.util.*;
-public class Digraph{
+public class DirectedGraphAdjacencyList{
     static class Graph{
         int n;
         List<Integer>[] adj;

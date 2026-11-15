@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class InsertPreDefArr {
+public class ArrayInsertIntoPredefined {
     public static void main(String[] args) {
         int[] Arr = {12, 47, 5, 33, 89, 21, 56, 3, 78, 64, 17, 29, 90, 8, 42};
 

@@ -1,4 +1,4 @@
-public class CheckNode {
+public class LinkedListSearch {
     static class Node {
         int data;
         Node next;
@@ -30,7 +30,7 @@ public class CheckNode {
     }
 
     public static void main(String[] args) {
-        CheckNode list=new CheckNode();
+        LinkedListSearch list=new LinkedListSearch();
         list.add(1);
         list.add(2);
         list.add(3);

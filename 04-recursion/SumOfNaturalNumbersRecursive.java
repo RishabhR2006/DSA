@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class SumRecurrNatural {
+public class SumOfNaturalNumbersRecursive {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number you want the sum of natural numbers until: ");

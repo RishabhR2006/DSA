@@ -1,4 +1,4 @@
-public class LinkedList {
+public class SinglyLinkedListBasics {
     static class Node {
         int data;
         Node next;
@@ -33,7 +33,7 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList list=new LinkedList();
+        SinglyLinkedListBasics list=new SinglyLinkedListBasics();
         list.add(10);
         list.add(20);
         list.add(30);

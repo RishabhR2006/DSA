@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 
-public class FibRecurr{
+public class FibonacciRecursive{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the term you want the fibonacci series until:  ");

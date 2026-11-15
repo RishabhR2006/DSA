@@ -1,4 +1,4 @@
-public class CircularSinglyLinkedListsOperations {
+public class CircularLinkedListOperations {
     static class Node{
         int data;
         Node next;
